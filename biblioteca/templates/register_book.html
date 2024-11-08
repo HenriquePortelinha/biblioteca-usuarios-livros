@@ -1,0 +1,32 @@
+<!-- register_book.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Livro</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Livro</h1>
+        <form action="/register_book/" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="book_title">Título do Livro:</label>
+                <input type="text" id="book_title" name="book_title" required>
+            </div>
+            <div class="form-group">
+                <label for="editorial">Editorial:</label>
+                <input type="text" id="editorial" name="editorial" required>
+            </div>
+            <div class="form-group">
+                <label for="published_at">Data de Publicação:</label>
+                <input type="date" id="published_at" name="published_at">
+            </div>
+            <button type="submit">Registrar Livro</button>
+        </form>
+    </div>
+</body>
+</html>

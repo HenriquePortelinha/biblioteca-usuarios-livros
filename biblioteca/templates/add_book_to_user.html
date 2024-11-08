@@ -1,0 +1,20 @@
+<!-- add_book_to_user.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+{% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Livro ao Usuário</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionar Livro ao Usuário</h1>
+        <form action="/add_book_to_user/{{ user_id }}/{{ book_id }}/" method="POST">
+            {% csrf_token %}
+            <button type="submit">Adicionar Livro</button>
+        </form>
+    </div>
+</body>
+</html>

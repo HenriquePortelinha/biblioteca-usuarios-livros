@@ -1,0 +1,29 @@
+### 2. **.gitignore**
+
+```plaintext
+# Ignorar arquivos de banco de dados
+db.sqlite3
+
+# Ignorar ambientes virtuais
+venv/
+
+# Ignorar caches Python
+__pycache__/
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de configuração do IDE (exemplo para VSCode)
+.vscode/
+
+# Ignorar arquivos de configuração de ambiente
+*.env
+
+# Ignorar arquivos do sistema operacional (Windows, Mac)
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de dependências do pip
+*.egg-info/
+*.egg
+*.dist-info/
